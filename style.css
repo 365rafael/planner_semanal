@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.day {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.day h2 {
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  background: #2c2c2c;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+.task-list li span {
+  flex: 1;
+  cursor: pointer;
+}
+
+.task-list li span.done {
+  text-decoration: line-through;
+  color: #888;
+}
+
+button {
+  background: #3498db;
+  border: none;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 0.3rem;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 4px;
+}

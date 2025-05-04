@@ -10,6 +10,34 @@ function loadTasks(day) {
   return data ? JSON.parse(data) : [];
 }
 
+function exportarTarefas() {
+  const dados = {};
+  for (let dia of ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]) {
+    dados[dia] = JSON.parse(localStorage.getItem("planner_" + dia) || "[]");
+  }
+  const blob = new Blob([JSON.stringify(dados, null, 2)], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "planner_tarefas.json";
+  a.click();
+}
+
+function importarTarefas(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const dados = JSON.parse(e.target.result);
+    for (let dia in dados) {
+      localStorage.setItem("planner_" + dia, JSON.stringify(dados[dia]));
+    }
+    location.reload(); // Recarga a página para refletir as alterações
+  };
+  reader.readAsText(file);
+}
+
+
 function createDayColumn(day) {
   let tasks = loadTasks(day);
 

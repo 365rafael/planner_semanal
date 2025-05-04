@@ -13,6 +13,12 @@
 <body>
   <div class="container">
     <h1>🗓️ Planner Semanal</h1>
+    <div style="text-align: center; margin-bottom: 1rem;">
+      <button onclick="exportarTarefas()">📤 Exportar Tarefas</button>
+      <input type="file" id="importarArquivo" accept=".json" style="display: none" onchange="importarTarefas(event)">
+      <button onclick="document.getElementById('importarArquivo').click()">📥 Importar Tarefas</button>
+    </div>
+    
     <div id="week"></div>
   </div>
   <script src="script.js"></script>

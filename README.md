@@ -1,15 +1,13 @@
-# 🗓️ Planner Semanal com Lembretes
+# 🗓️ Planner Semanal 
 
-Um planner simples feito com HTML, CSS e JavaScript puro, que permite organizar tarefas da semana, definir horários com lembretes por notificação, exportar/importar tarefas e muito mais!
+Um planner simples feito com HTML, CSS e JavaScript puro, que permite organizar tarefas da semana,exportar/importar tarefas e muito mais!
 
 ## ✨ Funcionalidades
 
 - ✅ Adicionar e listar tarefas semanais
-- 🕒 Definir horário para tarefas com lembrete por notificação do navegador
 - ☁️ Salvar automaticamente no navegador (localStorage)
 - 📤 Exportar tarefas para arquivo `.json`
 - 📥 Importar tarefas de um arquivo `.json`
-- 🔔 Notificações automáticas no horário da tarefa (API de Notificação)
 - 📱 Responsivo e adaptado para dispositivos móveis
 - 🌙 Tema escuro (dark mode)
 
